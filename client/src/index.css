@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-gray-800 antialiased;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+@layer components {
+  /* 버튼 - 주요(채움) */
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-md bg-primary-900 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors duration-150 hover:bg-primary-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  /* 버튼 - 보조(외곽선) */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-md border border-primary-900 bg-white px-5 py-2.5 text-sm font-semibold text-primary-900 transition-colors duration-150 hover:bg-primary-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  /* 버튼 - 위험(삭제 등) */
+  .btn-danger {
+    @apply inline-flex items-center justify-center rounded-md border border-accent-600 bg-white px-5 py-2.5 text-sm font-semibold text-accent-600 transition-colors duration-150 hover:bg-accent-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  /* 카드 */
+  .card {
+    @apply overflow-hidden rounded-xl bg-white shadow-card transition-shadow duration-200 hover:shadow-card-hover;
+  }
+
+  /* 입력 필드 */
+  .input-field {
+    @apply w-full rounded-md border border-gray-300 px-3 py-2 text-base text-gray-800 shadow-sm transition-colors focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500;
+  }
+
+  .label-text {
+    @apply mb-1 block text-sm font-medium text-gray-700;
+  }
+
+  .section-title {
+    @apply text-2xl font-bold text-primary-900 sm:text-3xl;
+  }
+}
