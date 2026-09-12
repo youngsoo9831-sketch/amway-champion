@@ -6,8 +6,10 @@ services:
     region: singapore
     buildCommand: >
       npm install --prefix client --include=dev &&
+      chmod +x client/node_modules/.bin/* &&
       npm run build --prefix client &&
       npm install --prefix server --include=dev &&
+      chmod +x server/node_modules/.bin/* &&
       npm run build --prefix server
     startCommand: npm run start:prod --prefix server
     envVars:
